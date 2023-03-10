@@ -12,13 +12,29 @@
     <body class="bg-dark text-white">
 
         <main>
-            <ul>
+            <div class="container d-flex flex-wrap align-items-center justify-content-center">
                 @foreach ($movies as $movie)
-                    <li>
-                        {{ $movie->title }}
-                    </li>
+                    <div class="card m-3" style="width: 18rem;">
+                        <div class="card-header text-dark">
+                            {{ $movie->title }}
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                Original Title: {{ $movie->original_title }}
+                            </li>
+                            <li class="list-group-item">
+                                Nationality: {{ $movie->nationality }}
+                            </li>
+                            <li class="list-group-item">
+                                Date: {{ $movie->date }}
+                            </li>
+                            <li class="list-group-item">
+                                Rating: {{ $movie->vote }}
+                            </li>
+                        </ul>
+                    </div>
                 @endforeach
-            </ul>
+            </div>
         </main>
 
     </body>
