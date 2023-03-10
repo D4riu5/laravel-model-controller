@@ -12,7 +12,13 @@
     <body class="bg-dark text-white">
 
         <main>
-            
+            <ul>
+                @foreach ($movies as $movie)
+                    <li>
+                        {{ $movie->title }}
+                    </li>
+                @endforeach
+            </ul>
         </main>
 
     </body>
